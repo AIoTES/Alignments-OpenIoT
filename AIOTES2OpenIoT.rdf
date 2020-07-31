@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:iiot="http://inter-iot.eu/GOIoTP#" xmlns:exmo="http://exmo.inrialpes.fr/align/ext/1.0/#" xmlns:saref="https://w3id.org/saref#" xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns="http://www.inter-iot.eu/sripas#" xmlns:sripas="http://www.inter-iot.eu/sripas#" xmlns:time="http://www.w3.org/2006/time#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dcelem="http://purl.org/dc/elements/1.1/" xmlns:co="http://inter-iot.eu/central" xmlns:geo-sf="http://www.opengis.net/def/sf/" xmlns:align="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" xmlns:sosa="http://www.w3.org/ns/sosa/" xmlns:saref-ps="http://ontology.tno.nl/saref/positionsensor#" xmlns:geosparql="http://www.opengis.net/ont/geosparql#" xmlns:openiot="http://openiot.eu/ontology/" xmlns:qudt="http://qudt.org/schema/qudt#" xmlns:iiotex="http://inter-iot.eu/GOIoTPex#">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:iiot="http://inter-iot.eu/GOIoTP#" xmlns:exmo="http://exmo.inrialpes.fr/align/ext/1.0/#" xmlns:saref="https://w3id.org/saref#" xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns="http://www.inter-iot.eu/sripas#" xmlns:sripas="http://www.inter-iot.eu/sripas#" xmlns:time="http://www.w3.org/2006/time#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dcelem="http://purl.org/dc/elements/1.1/" xmlns:co="http://inter-iot.eu/central" xmlns:geo-sf="http://www.opengis.net/def/sf/" xmlns:align="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#" xmlns:sosa="http://www.w3.org/ns/sosa/" xmlns:saref-ps="http://ontology.tno.nl/saref/positionsensor#" xmlns:geosparql="http://www.opengis.net/ont/geosparql#" xmlns:openiot="http://openiot.eu/ontology/" xmlns:example="http://example/ontology/" xmlns:qudt="http://qudt.org/1.1/vocab/" xmlns:iiotex="http://inter-iot.eu/GOIoTPex#" xmlns:activage-m3="http://purl.org/iot/vocab/m3-lite#" xmlns:openiot-res="http://openiot.eu/resource/" xmlns:activage-core ="http://www.semanticweb.org/activage/ontologies/2018/4/activage-core#">
       <align:Alignment>
-            <dcelem:title>AIOTES2OpenIoT</dcelem:title>
-            <exmo:version>1.0</exmo:version>
+            <dcelem:title>ai2op</dcelem:title>
+           <exmo:version>1.1</exmo:version>
             <dcelem:creator>Qaiser</dcelem:creator>
             <dcelem:description>Downstream aligment between Activage and OpenIoT ontology</dcelem:description>
             <dcelem:date> Jan 24 16:21:56 GMT 2020</dcelem:date>
         <align:onto1>
-            <align:Ontology rdf:about="http://inter-iot.eu/GOIoTPex#">
+            <align:Ontology rdf:about="http://inter-iot.eu/GOIoTP#"> 
                 <align:formalism>
                     <align:Formalism align:name="OWL2.0" align:uri="http://www.w3.org/2002/07/owl#"/>
                 </align:formalism>
@@ -21,48 +21,505 @@
             </align:Ontology>
             </align:onto2>
         <sripas:steps rdf:parseType="Literal">
-            <sripas:step sripas:order="1" sripas:cell="http://www.inter-iot.eu/sripas#1_sensor"/>
-      
-            <sripas:step sripas:order="2" sripas:cell="http://www.inter-iot.eu/sripas#2_point"/>
+            <sripas:step sripas:order="1" sripas:cell="http://www.inter-iot.eu/sripas#1_Spo2_Sensor"/>
+            <sripas:step sripas:order="2" sripas:cell="http://www.inter-iot.eu/sripas#2_Spo2_Observation"/>
+            
 
-            <sripas:step sripas:order="3" sripas:cell="http://www.inter-iot.eu/sripas#3_observation"/>
+            <sripas:step sripas:order="3" sripas:cell="http://www.inter-iot.eu/sripas#3_Calories_Sensor"/>
+            <sripas:step sripas:order="4" sripas:cell="http://www.inter-iot.eu/sripas#4_Calories_Observation"/>
+
+            <sripas:step sripas:order="5" sripas:cell="http://www.inter-iot.eu/sripas#5_Weight_Sensor"/>
+            <sripas:step sripas:order="6" sripas:cell="http://www.inter-iot.eu/sripas#6_Weight_Observation"/>
+
+            <sripas:step sripas:order="7" sripas:cell="http://www.inter-iot.eu/sripas#7_Sleep_Length_Sensor"/>
+            <sripas:step sripas:order="8" sripas:cell="http://www.inter-iot.eu/sripas#8_Sleep_Length_Observation"/>
+
+            <sripas:step sripas:order="9" sripas:cell="http://www.inter-iot.eu/sripas#9_Pulse_Sensor"/>
+            <sripas:step sripas:order="10" sripas:cell="http://www.inter-iot.eu/sripas#10_Pulse_Observation"/>
+
+            <sripas:step sripas:order="11" sripas:cell="http://www.inter-iot.eu/sripas#11_DIA_Sensor"/>
+            <sripas:step sripas:order="12" sripas:cell="http://www.inter-iot.eu/sripas#12_DIA_Observation"/>
+
+            <sripas:step sripas:order="13" sripas:cell="http://www.inter-iot.eu/sripas#13_SYS_Sensor"/>
+            <sripas:step sripas:order="14" sripas:cell="http://www.inter-iot.eu/sripas#14_SYS_Observation"/>
+
+            <sripas:step sripas:order="15" sripas:cell="http://www.inter-iot.eu/sripas#15_Step_Sensor"/>
+            <sripas:step sripas:order="16" sripas:cell="http://www.inter-iot.eu/sripas#16_Step_Observation"/>
+
+            <sripas:step sripas:order="17" sripas:cell="http://www.inter-iot.eu/sripas#17_point"/>
+
         </sripas:steps>
+
             <sripas:cellFormat>
                   <iiot:DataFormat rdf:about="http://inter-iot.eu/sripas#turtle"/>
             </sripas:cellFormat>
-            <align:map>
-            <align:Cell rdf:about="http://www.inter-iot.eu/sripas#1_sensor">
+          
+          <align:map>
+            <align:Cell rdf:about="http://www.inter-iot.eu/sripas#1_Spo2_Sensor">
                 <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-          [  a                sosa:Sensor ;
+            
+             openiot-res:59 a sosa:Sensor ;
             rdf:label   sripas:node_ent;
-            sosa:observes sripas:node_OBP ].
+            sosa:observes activage-m3:SPO2  .
+
+            
         </align:entity1>
         
                 <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-         
-
-            sripas:node_SNS a              sosa:Sensor ;
+          openiot-res:59  a       openiot:Sensor;
             openiot:category  sripas:node_ent;
-            sosa:observes  sripas:node_OBP .
-
+            sosa:observes  sripas:obs .
         </align:entity2>
+
         <align:relation>=</align:relation>
         
           <sripas:typings rdf:parseType="Literal">
                             <typing about="http://www.inter-iot.eu/sripas#node_ent" datatype="http://www.w3.org/2001/XMLSchema#string"/>
               </sripas:typings>
                 </align:Cell>
-          </align:map>
+        </align:map>
+
+        <align:map>
+        <align:Cell rdf:about="http://www.inter-iot.eu/sripas#2_Spo2_Observation">
+        <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+             [    a    sosa:Observation ;
+            iiot:hasUnit  activage-m3:Percent;
+            iiot:hasResultValue sripas:node_result;
+            sosa:madeBySensor  openiot-res:59;
+            sosa:observedProperty activage-m3:SPO2].
+
+     
+        </align:entity1>
+        <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+          
+           
+            [  a     sosa:Observation;
+            qudt:unit  sripas:node_unit;
+            sosa:hasSimpleResult sripas:node_result; 
+            sosa:madeBySensor  openiot-res:59;
+            sosa:observedProperty sripas:node_OBP] .
+        </align:entity2>
+        
+       <align:relation>=</align:relation>
+            <sripas:typings rdf:parseType="Literal">
+                          <typing about="http://www.inter-iot.eu/sripas#node_created" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                           <typing about="http://www.inter-iot.eu/sripas#node_result" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                          <typing about="http://www.inter-iot.eu/sripas#node_unit" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+            </sripas:typings>
+          </align:Cell>
+        </align:map>
+
+
+
           <align:map>
-          <align:Cell rdf:about="http://www.inter-iot.eu/sripas#2_point">
+            <align:Cell rdf:about="http://www.inter-iot.eu/sripas#3_Calories_Sensor">
+                <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               openiot-res:52 a sosa:Sensor ;
+            rdf:label   sripas:node_ent;
+            sosa:observes activage-m3:CaloriesBurned  .
+
+            
+        </align:entity1>
+        
+                <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        openiot-res:52  a       openiot:Sensor;
+            openiot:category  sripas:node_ent;
+            sosa:observes  sripas:obs .
+        </align:entity2>
+
+        <align:relation>=</align:relation>
+        
+          <sripas:typings rdf:parseType="Literal">
+                            <typing about="http://www.inter-iot.eu/sripas#node_ent" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+              </sripas:typings>
+                </align:Cell>
+        </align:map>
+
+        <align:map>
+        <align:Cell rdf:about="http://www.inter-iot.eu/sripas#4_Calories_Observation">
+        <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            
+            [    a    sosa:Observation ;
+            iiot:hasUnit  activage-m3:BMR;
+            iiot:hasResultValue sripas:node_result;
+            sosa:madeBySensor  openiot-res:52;
+            sosa:observedProperty activage-m3:CaloriesBurned].
+
+            
+     
+        </align:entity1>
+        <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+           
+           [  a     sosa:Observation;
+            qudt:unit  sripas:node_unit;
+            sosa:hasSimpleResult sripas:node_result; 
+            sosa:madeBySensor  openiot-res:52;
+            sosa:observedProperty sripas:node_OBP] .
+        </align:entity2>
+        
+       <align:relation>=</align:relation>
+            <sripas:typings rdf:parseType="Literal">
+                          <typing about="http://www.inter-iot.eu/sripas#node_created" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                           <typing about="http://www.inter-iot.eu/sripas#node_result" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                          <typing about="http://www.inter-iot.eu/sripas#node_unit" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+            </sripas:typings>
+          </align:Cell>
+        </align:map>
+
+
+
+          <align:map>
+            <align:Cell rdf:about="http://www.inter-iot.eu/sripas#5_Weight_Sensor">
+                <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            
+              openiot-res:54 a sosa:Sensor ;
+            rdf:label   sripas:node_ent;
+            sosa:observes activage-m3:Weight  .
+
+          
+        </align:entity1>
+        
+                <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+           openiot-res:54  a       openiot:Sensor;
+            openiot:category  sripas:node_ent;
+            sosa:observes  sripas:obs .
+        </align:entity2>
+
+        <align:relation>=</align:relation>
+        
+          <sripas:typings rdf:parseType="Literal">
+                            <typing about="http://www.inter-iot.eu/sripas#node_ent" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+              </sripas:typings>
+                </align:Cell>
+        </align:map>
+
+        <align:map>
+        <align:Cell rdf:about="http://www.inter-iot.eu/sripas#6_Weight_Observation">
+        <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+           
+            [    a    sosa:Observation ;
+            iiot:hasUnit  activage-m3:Kilogram;
+            iiot:hasResultValue sripas:node_result;
+            sosa:madeBySensor  openiot-res:54;
+            sosa:observedProperty activage-m3:Weight].
+
+            
+     
+        </align:entity1>
+        <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+           [  a     sosa:Observation;
+            qudt:unit  sripas:node_unit;
+            sosa:hasSimpleResult sripas:node_result; 
+            sosa:madeBySensor  openiot-res:54;
+            sosa:observedProperty sripas:node_OBP] .
+           
+        </align:entity2>
+        
+       <align:relation>=</align:relation>
+            <sripas:typings rdf:parseType="Literal">
+                          <typing about="http://www.inter-iot.eu/sripas#node_created" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                           <typing about="http://www.inter-iot.eu/sripas#node_result" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                          <typing about="http://www.inter-iot.eu/sripas#node_unit" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+            </sripas:typings>
+          </align:Cell>
+        </align:map>
+
+
+
+          <align:map>
+            <align:Cell rdf:about="http://www.inter-iot.eu/sripas#7_Sleep_Length_Sensor">
+                <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+             openiot-res:55 a sosa:Sensor ;
+            rdf:label   sripas:node_ent;
+            sosa:observes activage-m3:SleepMonitor  .
+
+
+        </align:entity1>
+        
+                <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+          openiot-res:55  a       openiot:Sensor;
+            openiot:category  sripas:node_ent;
+            sosa:observes  sripas:obs .
+        </align:entity2>
+
+        <align:relation>=</align:relation>
+        
+          <sripas:typings rdf:parseType="Literal">
+                            <typing about="http://www.inter-iot.eu/sripas#node_ent" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+              </sripas:typings>
+                </align:Cell>
+        </align:map>
+
+        <align:map>
+        <align:Cell rdf:about="http://www.inter-iot.eu/sripas#8_Sleep_Length_Observation">
+        <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            
+             [    a    sosa:Observation ;
+            iiot:hasUnit  sripas:node_unit;
+            iiot:hasResultValue sripas:node_result;
+            sosa:madeBySensor  openiot-res:55;
+            sosa:observedProperty sripas:node_OBP].
+
+            
+     
+        </align:entity1>
+        <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+          [  a     sosa:Observation;
+            qudt:unit  sripas:node_unit;
+            sosa:hasSimpleResult sripas:node_result; 
+            sosa:madeBySensor  openiot-res:55;
+            sosa:observedProperty activage-m3:SleepMonitor] .
+           
+        </align:entity2>
+        
+       <align:relation>=</align:relation>
+            <sripas:typings rdf:parseType="Literal">
+                          <typing about="http://www.inter-iot.eu/sripas#node_created" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                           <typing about="http://www.inter-iot.eu/sripas#node_result" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                          <typing about="http://www.inter-iot.eu/sripas#node_unit" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+            </sripas:typings>
+          </align:Cell>
+        </align:map>
+
+
+
+          <align:map>
+            <align:Cell rdf:about="http://www.inter-iot.eu/sripas#9_Pulse_Sensor">
+                <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+             openiot-res:56 a sosa:Sensor ;
+            rdf:label   sripas:node_ent;
+            sosa:observes activage-m3:PulseOxymeter  .
+
+            
+        </align:entity1>
+        
+                <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+          openiot-res:56  a       openiot:Sensor;
+            openiot:category  sripas:node_ent;
+            sosa:observes  sripas:obs .
+        </align:entity2>
+
+        <align:relation>=</align:relation>
+        
+          <sripas:typings rdf:parseType="Literal">
+                            <typing about="http://www.inter-iot.eu/sripas#node_ent" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+              </sripas:typings>
+                </align:Cell>
+        </align:map>
+
+        <align:map>
+        <align:Cell rdf:about="http://www.inter-iot.eu/sripas#10_Pulse_Observation">
+        <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            [    a    sosa:Observation ;
+            iiot:hasUnit  activage-m3:Percent;
+            iiot:hasResultValue sripas:node_result;
+            sosa:madeBySensor  openiot-res:56;
+            sosa:observedProperty activage-m3:PulseOxymeter].
+
+        </align:entity1>
+        <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+           [  a     sosa:Observation;
+            qudt:unit  sripas:node_unit;
+            sosa:hasSimpleResult sripas:node_result; 
+            sosa:madeBySensor  openiot-res:56;
+            sosa:observedProperty sripas:node_OBP] .
+           
+        </align:entity2>
+        
+       <align:relation>=</align:relation>
+            <sripas:typings rdf:parseType="Literal">
+                          <typing about="http://www.inter-iot.eu/sripas#node_created" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                           <typing about="http://www.inter-iot.eu/sripas#node_result" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                          <typing about="http://www.inter-iot.eu/sripas#node_unit" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+            </sripas:typings>
+          </align:Cell>
+        </align:map>
+
+
+
+          <align:map>
+            <align:Cell rdf:about="http://www.inter-iot.eu/sripas#11_DIA_Sensor">
+                <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            openiot-res:57 a sosa:Sensor ;
+            rdf:label   sripas:node_ent;
+            sosa:observes activage-m3:DiastolicBloodPressure  .
+
+        
+        </align:entity1>
+        
+                <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+              openiot-res:57  a       openiot:Sensor;
+            openiot:category  sripas:node_ent;
+            sosa:observes  sripas:obs .
+        </align:entity2>
+
+        <align:relation>=</align:relation>
+        
+          <sripas:typings rdf:parseType="Literal">
+                            <typing about="http://www.inter-iot.eu/sripas#node_ent" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+              </sripas:typings>
+                </align:Cell>
+        </align:map>
+
+        <align:map>
+        <align:Cell rdf:about="http://www.inter-iot.eu/sripas#12_DIA_Observation">
+        <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               [    a    sosa:Observation ;
+            iiot:hasUnit  activage-m3:MmHg;
+            iiot:hasResultValue sripas:node_result;
+            sosa:madeBySensor  openiot-res:57;
+            sosa:observedProperty activage-m3:DiastolicBloodPressure].
+
+
+           
+     
+        </align:entity1>
+        <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        
+            [  a     sosa:Observation;
+            qudt:unit  sripas:node_unit;
+            sosa:hasSimpleResult sripas:node_result; 
+            sosa:madeBySensor  openiot-res:57;
+            sosa:observedProperty sripas:node_OBP] .
+        </align:entity2>
+        
+       <align:relation>=</align:relation>
+            <sripas:typings rdf:parseType="Literal">
+                          <typing about="http://www.inter-iot.eu/sripas#node_created" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                           <typing about="http://www.inter-iot.eu/sripas#node_result" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                          <typing about="http://www.inter-iot.eu/sripas#node_unit" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+            </sripas:typings>
+          </align:Cell>
+        </align:map>
+
+
+
+          <align:map>
+            <align:Cell rdf:about="http://www.inter-iot.eu/sripas#13_SYS_Sensor">
+                <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            
+             openiot-res:58 a sosa:Sensor ;
+            rdf:label   sripas:node_ent;
+            sosa:observes activage-m3:SystolicBloodPressure  .
+
+            
+        </align:entity1>
+        
+                <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+          openiot-res:58  a       openiot:Sensor;
+            openiot:category  sripas:node_ent;
+            sosa:observes  sripas:obs .
+        </align:entity2>
+
+        <align:relation>=</align:relation>
+        
+          <sripas:typings rdf:parseType="Literal">
+                            <typing about="http://www.inter-iot.eu/sripas#node_ent" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+              </sripas:typings>
+                </align:Cell>
+        </align:map>
+
+        <align:map>
+        <align:Cell rdf:about="http://www.inter-iot.eu/sripas#14_SYS_Observation">
+        <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            [    a    sosa:Observation ;
+            iiot:hasUnit  activage-m3:MmHg;
+            iiot:hasResultValue sripas:node_result;
+            sosa:madeBySensor  openiot-res:58;
+            sosa:observedProperty activage-m3:SystolicBloodPressure].
+
+     
+        </align:entity1>
+        <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+           
+            [  a     sosa:Observation;
+            qudt:unit  sripas:node_unit;
+            sosa:hasSimpleResult sripas:node_result; 
+            sosa:madeBySensor  openiot-res:58;
+            sosa:observedProperty sripas:node_OBP] .
+           
+        </align:entity2>
+        
+       <align:relation>=</align:relation>
+            <sripas:typings rdf:parseType="Literal">
+                          <typing about="http://www.inter-iot.eu/sripas#node_created" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                           <typing about="http://www.inter-iot.eu/sripas#node_result" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                          <typing about="http://www.inter-iot.eu/sripas#node_unit" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+            </sripas:typings>
+          </align:Cell>
+        </align:map>
+
+
+
+      <align:map>
+            <align:Cell rdf:about="http://www.inter-iot.eu/sripas#15_Step_Sensor">
+                <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                 openiot-res:53 a sosa:Sensor ;
+            rdf:label   sripas:node_ent;
+            sosa:observes activage-core:WalkingActivity  .
+
+            
+        </align:entity1>
+        
+                <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      openiot-res:53  a       openiot:Sensor;
+            openiot:category  sripas:node_ent;
+            sosa:observes  sripas:obs .
+        </align:entity2>
+
+        <align:relation>=</align:relation>
+        
+          <sripas:typings rdf:parseType="Literal">
+                            <typing about="http://www.inter-iot.eu/sripas#node_ent" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+              </sripas:typings>
+                </align:Cell>
+        </align:map>
+
+        <align:map>
+        <align:Cell rdf:about="http://www.inter-iot.eu/sripas#16_Step_Observation">
+        <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            
+            [    a    sosa:Observation ;
+            iiot:hasUnit  activage-m3:Step;
+            iiot:hasResultValue sripas:node_result;
+            sosa:madeBySensor  openiot-res:53;
+            sosa:observedProperty activage-core:WalkingActivity].
+
+            
+     
+        </align:entity1>
+        <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+           [  a     sosa:Observation;
+            qudt:unit  sripas:node_unit;
+            sosa:hasSimpleResult sripas:node_result; 
+            sosa:madeBySensor  openiot-res:53;
+            sosa:observedProperty sripas:node_OBP] .
+           
+        </align:entity2>
+        
+       <align:relation>=</align:relation>
+            <sripas:typings rdf:parseType="Literal">
+                          <typing about="http://www.inter-iot.eu/sripas#node_created" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                           <typing about="http://www.inter-iot.eu/sripas#node_result" datatype="http://www.w3.org/2001/XMLSchema#float"/>
+                          <typing about="http://www.inter-iot.eu/sripas#node_unit" datatype="http://www.w3.org/2001/XMLSchema#string"/>
+            </sripas:typings>
+          </align:Cell>
+        </align:map>
+
+
+
+          <align:map>
+          <align:Cell rdf:about="http://www.inter-iot.eu/sripas#17_point">
               <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-           [ a                sosa:Result , geosparql:Geometry, sripas:node_Blank ;
+          [ a                geosparql:Geometry, sripas:node_Blank ;
             geosparql:asWKT   sripas:node_point
           ] .
+          
+          
         </align:entity1>
         
               <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-        [ a               wgs84_pos:Point , sosa:Platform , sripas:node_Blank;
+          [ a               wgs84_pos:Point , sosa:Platform , sripas:node_Blank;
             geosparql:hasGeometry [ geosparql:asWKT sripas:node_point ]
           ] .
         </align:entity2>
@@ -75,38 +532,7 @@
               </align:Cell>
         </align:map>
 
-          <align:map>
-          <align:Cell rdf:about="http://www.inter-iot.eu/sripas#3_observation">
-              <align:entity1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-          [ a                sosa:Observation , sosa:Result ;
-            sosa:madBySensor  sripas:node_SNS;
-            sosa:resultTime   sripas:node_created;
-            sosa:hasSimpleResult sripas:node_result;
-            sosa:observedProperty sripas:node_OBP
-          ] .
 
-        </align:entity1>
-        
-              <align:entity2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-        
-            [ a              sosa:Observation;
-            sosa:madBySensor  sripas:node_SNS;
-            sosa:resultTime   sripas:node_created;
-            qudt:unit  sripas:node_unit;
-            sosa:hasSimpleResult sripas:node_result;
-            sosa:observedProperty sripas:node_OBP
-          ] .
-        </align:entity2>
-        
-            <align:relation>=</align:relation>
-         <sripas:typings rdf:parseType="Literal">
-                          <typing about="http://www.inter-iot.eu/sripas#node_created" datatype="http://www.w3.org/2001/XMLSchema#float"/>
-                           <typing about="http://www.inter-iot.eu/sripas#node_result" datatype="http://www.w3.org/2001/XMLSchema#float"/>
-                          <typing about="http://www.inter-iot.eu/sripas#node_unit" datatype="http://www.w3.org/2001/XMLSchema#string"/>
-            </sripas:typings>
-
-              </align:Cell>
-        </align:map>
 
       </align:Alignment>
     </rdf:RDF>
